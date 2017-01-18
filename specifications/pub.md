@@ -35,9 +35,3 @@ The constructor of the object.
 Throws out everyone from the pub
 ### ```change_music```
 Turn on music.
-
-
-
-
-
-
