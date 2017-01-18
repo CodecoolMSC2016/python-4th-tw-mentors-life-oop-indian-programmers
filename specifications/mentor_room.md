@@ -19,7 +19,7 @@ None
 * ```window_open```
   * data type: bool
   * description: stores the state of the window
-  
+
 
 
 
