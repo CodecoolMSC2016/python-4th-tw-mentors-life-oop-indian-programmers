@@ -1,4 +1,5 @@
 from person import Person
+import csv
 
 
 class Student(Person):
@@ -8,8 +9,9 @@ class Student(Person):
         self.energy_level = energy_level
 
     def create_by_csv(csv_path):
-        my_file = open(csv_path, "r")
         students = []
-        for line in my_file:
-            students.append(line)
-        my_file.close()
+        with open(csv_path, "r") as csvfile:
+            csv_file = csv.reader(csvfile)
+            for row in csv_file:
+                student = Student(row[0], row[1])
+                students.append(student)
