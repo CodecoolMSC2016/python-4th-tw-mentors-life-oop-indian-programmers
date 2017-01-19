@@ -15,23 +15,19 @@ class CodecoolClass:
         return CodecoolClass("Miskolc", 2016, Mentor.create_by_csv("mentors.csv"), Student.create_by_csv("students.csv"))
 
     def find_student_by_full_name(self, full_name):
-        name = full_name.split()
-        first_name = name[0]
-        last_name = name[1]
-        for mentor in self.students:
-            if mentor.first_name == first_name and mentor.last_name == last_name:
-                print(full_name + " was found ")
-                return mentor
-            else:
-                print(full_name + " was not found")
+        name = full_name.strip(" ")
+        for student in self.students:
+            if (student.first_name + student.last_name).strip(" ") == name:
+                print(name + " was found ")
+                return student
+        else:
+            print(name + " was not found")
 
     def find_mentor_by_full_name(self, full_name):
-        name = full_name.split()
-        first_name = name[0]
-        last_name = name[1]
+        name = full_name.strip(" ")
         for mentor in self.mentors:
-            if mentor.first_name == first_name and mentor.last_name == last_name:
-                print(full_name + " was found")
+            if (mentor.first_name + mentor.last_name).strip(" ") == name:
+                print(name + " was found ")
                 return mentor
-            else:
-                print(full_name + " was not found")
+        else:
+            print(name + " was not found")

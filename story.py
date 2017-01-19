@@ -11,9 +11,10 @@ import os
 codecool_bp = CodecoolClass.create_local()
 # for student in codecool_bp.students:
 #   print(student.first_name + student.last_name)
-zita = codecool_bp.find_student_by_full_name("Zita Para")
+student1 = codecool_bp.find_student_by_full_name("István Dolgozik")
+mentor1 = codecool_bp.find_mentor_by_full_name("Balázs Pekár")
 
-print(zita.gender)
+print(student1.gender)
 paprika = Pub()
 mentor_room = Mentor_Room()
 
