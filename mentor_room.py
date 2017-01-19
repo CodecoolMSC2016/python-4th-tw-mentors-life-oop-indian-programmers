@@ -10,3 +10,6 @@ class Mentor_Room():
         if self.is_clean == False:
             self.window_open = True
             self.clean = True
+            
+    def start_bfa(self):
+        self.bfa_running= True
