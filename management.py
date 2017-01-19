@@ -12,5 +12,5 @@ class Management():
     @classmethod
     def give_raise(cls, mentor):
         mentor.salary *= 1.05
-        return mentor.first_name + mentor.last_name + " got a " + str(mentor.salary * 0.05) \
+        return mentor.first_name + mentor.last_name + " got a " + str(int(mentor.salary * 0.05)) \
             + " raise!\n He now earns: " + str(int(mentor.salary)) + "Ft"

@@ -7,17 +7,13 @@ from management import Management
 from mentor_room import Mentor_Room
 import os
 import time
-
-
-def start_story(filename):
-    with open(filename) as f:
-        for line in f:
-            print(line)
-            time.sleep(0.5)
+import random
 
 
 def main():
-    start_story("story.txt")
+    cc_msc = CodecoolClass.create_local()
+    mentor = random.choice(cc_msc.mentors)
+    print("It's 8 am in the morning, our hero, " + mentor.first_name + " starts his daily routine in the Pub.")
     time.sleep(1)
     pub = Pub("Paprika")
     print("Location: " + pub.name + " Pub")
@@ -25,7 +21,7 @@ def main():
         time.sleep(0.3)
         print("\t" + key + ": " + str(value))
     print("How many rounds you wish to drink?")
-    number_of_rounds=int(input("\n"))
+    number_of_rounds = int(input("\n"))
     for i in range(number_of_rounds):
         print("Serving alcohol to people...\n" + pub.serve_alcohol())
         print(pub.change_music())
@@ -37,8 +33,7 @@ def main():
     time.sleep(1)
     print("Management:Dear mentor for your hard and soulful work attitude we have decided to give you a rasise in your salary")
     time.sleep(1)
-
-
+    print(Management.give_raise(mentor))
 
 
 if __name__ == '__main__':
