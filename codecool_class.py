@@ -12,7 +12,7 @@ class CodecoolClass:
 
     @classmethod
     def create_local(cls):
-        return CodecoolClass("Miskolc", 2016, Mentor.create_by_csv(), Student.create_by_csv())
+        return CodecoolClass("Miskolc", 2016, Mentor.create_by_csv("mentors.csv"), Student.create_by_csv("students.csv"))
 
     def find_student_by_full_name(self, full_name):
         name = full_name.split()
