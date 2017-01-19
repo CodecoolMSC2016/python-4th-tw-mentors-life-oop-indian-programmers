@@ -2,7 +2,7 @@ from person import Person
 
 
 class Mentor(Person):
-    def __init__(self, nickname,has_contract = True , salary):
+    def __init__(self, nickname, has_contract = True, salary=200000):
         self.nickname = nickname
 
     def create_by_csv(csv_path):
