@@ -2,14 +2,15 @@ from person import Person
 from mentor import Mentor
 
 
-class Management(Person):
-    def __init__(self):
-        super().__init__()
+class Management():
 
-    def fire_mentor(self,name):
-        if isinstance(name,Mentor):
-            super.has_contract = False
+    @classmethod
+    def fire_mentor(cls, mentor):
+        mentor.has_contract = False
+        return mentor.first_name + mentor.last_name + "has been fired! :("
 
-    def give_raise(self,name,amount):
-        if isinstance(name,Mentor):
-            super().salary += amount
+    @classmethod
+    def give_raise(cls, mentor):
+        mentor.salary *= 1.05
+        return mentor.first_name + mentor.last_name + " got a " + str(mentor.salary * 0.05) \
+            + " raise!\n He now earns: " + str(int(mentor.salary)) + "Ft"
