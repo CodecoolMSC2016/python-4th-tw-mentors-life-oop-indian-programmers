@@ -21,7 +21,7 @@ class Pub():
         with open("music_list.txt") as f:
             for line in f:
                 music_list.append(line)
-        return music_list[random.randint(0, len(music_list))] + "is playing in the pub."
+        return random.choice(music_list) + "is playing in the pub."
 
     def serve_alcohol(self):
         self.mood_level += 5
