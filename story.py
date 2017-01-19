@@ -31,10 +31,32 @@ def main():
     time.sleep(1)
     print("It's 9AM our hero mentor,has arrived to CodeCool,As soon as he arrives the management calls him")
     time.sleep(1)
-    print("Management:Dear mentor for your hard and soulful work attitude we have decided to give you a rasise in your salary")
+    print("Management: Dear mentor for your hard and soulful work attitude we have decided to give you a rasise in your salary")
     time.sleep(1)
     print(Management.give_raise(mentor))
-
+    print("Management: Now Be Awesome and teach new stuff to students.")
+    mentor_room = Mentor_Room()
+    print(mentor_room.start_bfa())
+    bfa_student = random.choice(cc_msc.students)
+    print(bfa_student.last_name + bfa_student.first_name + "starts his/her BFA now.")
+    time.sleep(0.5)
+    print(bfa_student.last_name + "turns on his/her laptop.")
+    laptop = Laptop()
+    for msg in laptop.turn_on():
+        os.system("clear")
+        print(msg)
+    for msg in laptop.run_code():
+        print(msg)
+    print("Unfortunately, our mentor starts to feel sick because of the heat and he vomits on " +
+          bfa_student.last_name + bfa_student.first_name + ". :(")
+    print(mentor_room.gets_dirty())
+    print(mentor_room.stop_bfa())
+    print(mentor_room.open_window())
+    time.sleep(1)
+    print("Management enters mentor room, notices that everything is covered in vomit.\n He fires " +
+          mentor.first_name + mentor.last_name + ".")
+    print(Management.fire_mentor(mentor))
+    print(mentor.first_name + mentor.last_name + "wakes up in bed from this nightmare, covered in sweat.\n The end.")
 
 if __name__ == '__main__':
     main()
