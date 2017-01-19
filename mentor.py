@@ -1,4 +1,5 @@
 from person import Person
+import random
 
 
 class Mentor(Person):
@@ -6,7 +7,7 @@ class Mentor(Person):
     def __init__(self, first_name, last_name, year_of_birth, gender, nickname, has_contract=True):
         super().__init__(first_name, last_name, year_of_birth, gender)
         self.nickname = nickname
-        self.salary = 200000
+        self.salary = random.randint(0, 1000000)
 
     @classmethod
     def create_by_csv(cls, csv_path):
