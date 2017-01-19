@@ -32,6 +32,13 @@ def main():
         time.sleep(0.6)
     print("After so many rounds a bar fight starts,the security comes to handle it")
     print(pub.handle_pub_fight())
+    time.sleep(1)
+    print("It's 9AM our hero mentor,has arrived to CodeCool,As soon as he arrives the management calls him")
+    time.sleep(1)
+    print("Management:Dear mentor for your hard and soulful work attitude we have decided to give you a rasise in your salary")
+    time.sleep(1)
+
+
 
 
 if __name__ == '__main__':
