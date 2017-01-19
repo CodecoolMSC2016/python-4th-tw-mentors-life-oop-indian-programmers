@@ -24,9 +24,14 @@ def main():
     for key, value in vars(pub).items():
         time.sleep(0.3)
         print("\t" + key + ": " + str(value))
-
-    print("Serving alcohol to people...\n" + pub.serve_alcohol())
-    print(pub.change_music())
+    print("How many rounds you wish to drink?")
+    number_of_rounds=int(input("\n"))
+    for i in range(number_of_rounds):
+        print("Serving alcohol to people...\n" + pub.serve_alcohol())
+        print(pub.change_music())
+        time.sleep(0.6)
+    print("After so many rounds a bar fight starts,the security comes to handle it")
+    print(pub.handle_pub_fight())
 
 
 if __name__ == '__main__':
