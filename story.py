@@ -9,6 +9,13 @@ import os
 
 
 codecool_bp = CodecoolClass.create_local()
+# for student in codecool_bp.students:
+#   print(student.first_name + student.last_name)
+zita = codecool_bp.find_student_by_full_name("Zita Para")
+
+print(zita.gender)
+paprika = Pub()
+mentor_room = Mentor_Room()
 
 input("Turn on laptop? ")
 laptop = Laptop()

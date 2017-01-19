@@ -14,8 +14,9 @@ class Student(Person):
         students = []
         myfile = open(csv_path, "r")
         for line in myfile:
+            line = line.lstrip().split(",")
             first_name, last_name = line[0], line[1]
             year_of_birth, gender, knowledge_level, energy_level = line[2], line[3], line[4], line[5]
-            mentors.append(Mentor(first_name, last_name, year_of_birth, gender, knowledge_level, energy_level))
+            students.append(Student(first_name, last_name, year_of_birth, gender, knowledge_level, energy_level))
         myfile.close()
-        return mentors
+        return students

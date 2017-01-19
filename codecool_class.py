@@ -18,8 +18,7 @@ class CodecoolClass:
         name = full_name.split()
         first_name = name[0]
         last_name = name[1]
-        list_of_students = Student.create_by_csv()
-        for mentor in list_of_students:
+        for mentor in self.students:
             if mentor.first_name == first_name and mentor.last_name == last_name:
                 print(full_name + " was found ")
                 return mentor
@@ -30,8 +29,7 @@ class CodecoolClass:
         name = full_name.split()
         first_name = name[0]
         last_name = name[1]
-        list_of_mentors = Mentor.create_by_csv()
-        for mentor in list_of_mentors:
+        for mentor in self.mentors:
             if mentor.first_name == first_name and mentor.last_name == last_name:
                 print(full_name + " was found")
                 return mentor
