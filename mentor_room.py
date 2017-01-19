@@ -13,3 +13,8 @@ class Mentor_Room():
 
     def start_bfa(self):
         self.bfa_running= True
+        return "BFA has started"
+
+    def stop_bfa(self):
+        self.bfa_running=False
+        return "BFA has stopped"
