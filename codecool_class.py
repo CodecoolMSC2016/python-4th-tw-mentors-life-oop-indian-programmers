@@ -11,7 +11,7 @@ class CodecoolClass:
         self.students = students
 
     @classmethod
-    def generate_local(cls):
+    def create_local(cls):
         return CodecoolClass("Miskolc", 2016, Mentor.create_by_csv(), Student.create_by_csv())
 
     def find_student_by_full_name(self, full_name):
