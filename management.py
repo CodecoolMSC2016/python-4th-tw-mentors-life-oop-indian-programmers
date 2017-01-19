@@ -1,6 +1,6 @@
 from person import Person
 from mentor import Mentor
-
+import random
 
 class Management():
 
@@ -11,6 +11,6 @@ class Management():
 
     @classmethod
     def give_raise(cls, mentor):
-        mentor.salary *= 1.05
-        return mentor.first_name + mentor.last_name + " got a " + str(int(mentor.salary * 0.05)) \
-            + " raise!\n He now earns: " + str(int(mentor.salary)) + "Ft"
+        raise_percentage =  random.random()
+        mentor.salary += mentor.salary * raise_percentage
+        return mentor.first_name + mentor.last_name + " got a " + "{0}% raise!\n He now earns: {1:,} Ft".format(int(raise_percentage*100), int(mentor.salary))
