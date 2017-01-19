@@ -1,2 +1,14 @@
-It's 8 am in the morning,
-our hero the mentor starts his daily routine in the Pub.
+It's 8 am in the morning, our hero,
+ starts his daily routine in the Pub.
+Location:
+How many round do you wish to drink?
+Serving alcohol to people...\n
+After so many rounds a bar fight starts,the security comes to handle it.
+It's 9AM our hero mentor,has arrived to CodeCool,As soon as he arrives the management calls him.
+Management: Dear mentor for your hard and soulful work attitude we have decided to give you a rasise in your salary
+Management: Now Be Awesome and teach new stuff to students.
+ starts his/her BFA now.
+ turns on his/her laptop.
+Unfortunately, our mentor starts to feel sick because of the heat and he vomits on 
+Management enters mentor room, notices that everything is covered in vomit.\n He fires 
+ wakes up in bed from this nightmare, covered in sweat.\n The end.
