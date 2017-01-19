@@ -16,3 +16,7 @@ class Pub():
 
     def change_music(self):
         self.music_playing = True
+
+    def drink_alcohol(self):
+        self.moodlevel += 5
+        return self.moodlevel
