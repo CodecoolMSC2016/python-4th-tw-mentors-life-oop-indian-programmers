@@ -6,29 +6,28 @@ from pub import Pub
 from management import Management
 from mentor_room import Mentor_Room
 import os
+import time
 
 
-codecool_bp = CodecoolClass.create_local()
-# for student in codecool_bp.students:
-#   print(student.first_name + student.last_name)
-student1 = codecool_bp.find_student_by_full_name("István Dolgozik")
-mentor1 = codecool_bp.find_mentor_by_full_name("Balázs Pekár")
-paprika = Pub()
-mentor_room = Mentor_Room()
-management1 = Management()
-print(Management.fire_mentor(mentor1))
-print(Management.give_raise(mentor1))
-
-input("Turn on laptop? ")
-laptop = Laptop()
-for msg in laptop.turn_on():
-    os.system("clear")
-    print(msg)
-input()
+def start_story(filename):
+    with open(filename) as f:
+        for line in f:
+            print(line)
+            time.sleep(0.5)
 
 
 def main():
-    pass
+    start_story("story.txt")
+    time.sleep(1)
+    pub = Pub("Paprika")
+    print("Location: " + pub.name + " Pub")
+    for key, value in vars(pub).items():
+        time.sleep(0.3)
+        print("\t" + key + ": " + str(value))
+
+    print("Serving alcohol to people...\n" + pub.serve_alcohol())
+    print(pub.change_music())
+
 
 if __name__ == '__main__':
     main()
